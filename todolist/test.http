@@ -1,1 +1,18 @@
-GET http://127.0.0.1:3000
+# GET http://127.0.0.1:3000
+
+# POST http://127.0.0.1:3000
+# Content-Type: application/json
+# Accept: application/json
+
+# {
+#     "todo": "task b"
+# }
+
+PUT http://127.0.0.1:3000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id" : 0,
+    "todo": "task b"
+}
