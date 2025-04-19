@@ -10,6 +10,8 @@ const server = http.createServer((request, response) => {
         service.createTodo(request, response);
     } else if (request.method === "PUT") {
         service.UpdateTodo(request, response);
+    } else if (request.method === "DELETE") {
+        service.DeleteTodo(request, response);
     }
 });
 

@@ -1,6 +1,6 @@
 export class TodolistService {
 
-    todolist = ["Agent A", "Agent B", "Agent C"];
+    todolist = ["Task A", "Task B", "Task C"];
 
     getJsonTodoList() {
         return JSON.stringify({
@@ -35,6 +35,18 @@ export class TodolistService {
             const body = JSON.parse(data.toString());
             if (this.todolist[body.id]) {
                 this.todolist[body.id] = body.todo;
+            }
+
+            response.write(this.getJsonTodoList());
+            response.end();
+        })
+    }
+
+    DeleteTodo(request, response) {
+        request.addListener("data", (data) => {
+            const body = JSON.parse(data.toString());
+            if (this.todolist[body.id]) {
+                this.todolist.splice(body.id, 1);
             }
 
             response.write(this.getJsonTodoList());
