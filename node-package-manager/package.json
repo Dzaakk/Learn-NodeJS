@@ -2,7 +2,10 @@
   "name": "learn-npm",
   "version": "1.0.0",
   "description": "learn node package manager",
-  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./write": "./write.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Dzaakk/Learn-NodeJS.git"
