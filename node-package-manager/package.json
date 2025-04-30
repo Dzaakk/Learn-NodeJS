@@ -22,7 +22,7 @@
   "type": "module",
   "dependencies": {
     "lodash": "4.17.21",
-    "dz-learn-npm-library": "x"
+    "dz-learn-npm-library": "^1.0.0"
   },
   "devDependencies": {
     "moment": "^2.29.3"
